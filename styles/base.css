@@ -1,10 +1,11 @@
 * {
     box-sizing: border-box;
     margin: auto;   
-    font-family: roboto,system-ui;
+  
 }
 body {
     max-width: 1000px;
+    font-family: roboto,sans-serif;
 }
 header {
     width: auto;
