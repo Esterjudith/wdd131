@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+/* Mobile view ************************/
+header {
+    background-color:purple;
+    color: white;
+    padding: .75rem;
+
+}
+#menu {
+    display: block;
+    font-size: 2rem;
+    font-weight: 500;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: .5rem .75rem;    
+    color: #000;
+}
+#menu::before {
+    content: "≡";
+    color: white;
+}
+
+nav {
+    background-color:purple;
+    max-width: 760px;
+}
+
+.navigation {
+    list-style: none;
+    margin: 0 auto;
+    max-width: 760px;
+}
+
+.navigation li {
+    display:none;
+}
+
+.navigation a {
+  display: block;
+  padding: 0.75px;
+  text-align:left;
+  text-decoration: none;
+  padding: .5rem .75rem;
+  color: white;
+  font-weight: 700;
+  transition: 0.5s;
+  font: clamp(1rem, 2vmin, 1.5rem);
+  font-size: 1.2rem;
+}
+
+.navigation a:hover, navigation a:active {
+    color: white;
+    background-color: rgb(62, 30, 62);
+}
+
+.show li {
+    display: block; 
+}
+
+#menu.show::before {
+    content: "X";
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+figure {
+    margin: 1rem;
+}
+
+figcaption {
+    text-align: center;
+}
+
+footer {
+    text-align: center;    
+    background-color: purple;
+}
+
+footer > p {
+    padding: 0.5rem;
+    color: white;
+}
