@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Place">
+    <meta name="author" content="Judy Hanson">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+    <title>Place</title>
+</head>
+<body>
+    <header>
+        <h1>Vietnam</h1>
+    </header>
+    <main>
+        <section class="hero">
+            <picture>
+                <source media="(min-width: 1500px)"
+                srcset="images/large.webp 1800w"> 
+                
+                <source media="(min-width: 780px)"
+                srcset="images/medium.webp 1280w"
+             >   
+
+                <img src="images/small.webp" alt="River in Vietnam" >
+            </picture>
+        </section>
+        <!-- Data section -->
+        <section class="info">
+            <h2 class="section-title">Section Title</h2>
+            <ul class="data-list">
+                <li data-label="Label 1">Data 1</li>
+                <l<li><strong>Label 1:</strong> <span>Data 1</span></li>
+                <li><strong>Label 2:</strong> <span>Data 2</span></li>
+                <li><strong>Label 3:</strong> <span>Data 3</span></li>
+                <li><strong>Label 4:</strong> <span>Data 4</span></li>
+                <li><strong>Label 5:</strong> <span>Data 5</span></li>
+                <li><strong>Label 6:</strong> <span>Data 6</span></li>
+                <li><strong>Label 7:</strong> <span>Data 7</span></li>
+                <li><strong>Label 8:</strong> <span>Data 8</span></li>
+            </ul>
+        </section>
+
+        <!--Weather section  -->
+        <section class="weather">
+            <h2 class="section-title">Weather</h2>
+            <img class="weather-icon"  src="images/1530391_weather_clouds_sun_sunny_icon.svg" alt="weather Icon">
+            <ul class="weather-list">
+                <li><strong>Temp:</strong> <span>72°F</span></li>
+                <li><strong>Wind:</strong> <span>15 mph</span></li>
+                <li><strong>Humidity:</strong> <span>45%</span></li>
+                <li><strong>Pressure:</strong> <span>30.12 inHg</span></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>©️2024 🌵Judy Hanson🌵 USA</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
