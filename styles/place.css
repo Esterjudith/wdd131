@@ -87,10 +87,13 @@ span:first-child {
     width: 300px;  
 }
 
+.weather-title::after{
+    content:"⛅";
+    display: inline-block;       
+    padding-left: 2rem;
+}
 .weather-icon {
-    display: block;
-    margin: 0 auto;
-    width: 50px;
+    display: none;    
 }
 
 
@@ -106,6 +109,63 @@ footer p {
 }
 
 /* Responsive Design with Media Query */
+@media (min-width: 530px) {
+    main {
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Medium size layout */
+    .hero {
+        background-image: url('../images/medium.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+    }
+    .hero img {
+        display: none;
+    }
+
+    .data-section {
+        position: absolute;
+        top: 15%;
+        left: 2%;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        max-width: 300px;
+    }
+
+    .weather {
+        position: absolute;
+        bottom: 10%;
+        right: 5%;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        max-width: 300px;
+    }
+
+    .section-title {
+        margin-left: -40px; /* Title hanging effect */
+    }
+    .weather-title::after{       
+        display:none;
+     
+    }
+    .weather-icon {
+        display: block;
+        margin: 0 auto;
+        width: 50px;
+    }
+    
+}
+
+/* Larger size layout */
+
 @media (min-width: 768px) {
     main {
         display: flex;
@@ -140,4 +200,14 @@ footer p {
     .section-title {
         margin-left: -40px; /* Title hanging effect */
     }
+    .weather-title::after{       
+        display:none;
+     
+    }
+    .weather-icon {
+        display: block;
+        margin: 0 auto;
+        width: 50px;
+    }
+    
 }
