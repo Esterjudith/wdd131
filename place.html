@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/place.css">
     <script src="scripts/place.js" defer></script>
-    <title>Place</title>
+    <title>Vietnam</title>
 </head>
 <body>
     <header>
@@ -30,30 +30,29 @@
             </picture>
         </section>
         <!-- Data section -->
-        <section class="info">
-            <h2 class="section-title">Section Title</h2>
-            <ul class="data-list">
-                <li data-label="Label 1">Data 1</li>
-                <l<li><strong>Label 1:</strong> <span>Data 1</span></li>
-                <li><strong>Label 2:</strong> <span>Data 2</span></li>
-                <li><strong>Label 3:</strong> <span>Data 3</span></li>
-                <li><strong>Label 4:</strong> <span>Data 4</span></li>
-                <li><strong>Label 5:</strong> <span>Data 5</span></li>
-                <li><strong>Label 6:</strong> <span>Data 6</span></li>
-                <li><strong>Label 7:</strong> <span>Data 7</span></li>
-                <li><strong>Label 8:</strong> <span>Data 8</span></li>
+        <section class="data-section">
+            <h2 class="section-title">Data</h2>
+            <ul class="section-list">               
+                <li><span>Area:</span> <span>331,210</span></li>
+                <li><span>Population:</span> <span>97,000,000</span></li>
+                <li><span>Capital:</span> <span>Hanoi</span></li>
+                <li><span>Currency:</span> <span>Vietnamese Dong (VND)</span></li>
+                <li><span>Timezone:</span> <span>Indochina Time (UTC+7)</span></li>
+                <li><span>Calling code:</span> <span>+84</span></li>
+                <li><span>Internet TLD:</span> <span>.vn</span></li>
+               
             </ul>
         </section>
 
         <!--Weather section  -->
         <section class="weather">
             <h2 class="section-title">Weather</h2>
-            <img class="weather-icon"  src="images/1530391_weather_clouds_sun_sunny_icon.svg" alt="weather Icon">
-            <ul class="weather-list">
-                <li><strong>Temp:</strong> <span>72°F</span></li>
-                <li><strong>Wind:</strong> <span>15 mph</span></li>
-                <li><strong>Humidity:</strong> <span>45%</span></li>
-                <li><strong>Pressure:</strong> <span>30.12 inHg</span></li>
+            <img class="weather-icon"  src="images/1530391_weather_clouds_sun_sunny_icon.svg" alt="weather Icon" width="50px">
+            <ul class="section-list">
+                <li><span>Temperature:</span><span id="temp">72°F</span></li>
+                <li><span>Conditions:</span> <span>Partly Cloudy</span></li>
+                <li><span>Wind:</span> <span id="wind-speed">5 km/h</span></li>
+                <li><span>Wind Chill:</span> <span id="wind-chill"></span></li>
             </ul>
         </section>
     </main>

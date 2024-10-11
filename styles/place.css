@@ -1,9 +1,14 @@
 /* Global Variables */
 :root {
+    background:rgb(253, 230, 138);
     --primary-color: #333;
     --secondary-color: #666;
     --background-color: #f5f5f5;
     --text-color: #fff;
+}
+
+h1, h2 {
+    margin-bottom: 10px;
 }
 
 /* Basic Reset */
@@ -13,25 +18,29 @@
     box-sizing: border-box;
 }
 
-body {
+body {    
     font-family: Arial, sans-serif;
-    background-color: var(--background-color);
+    
     color: var(--primary-color);
 }
 
-header {
+header {    
     background-color: var(--primary-color);
     color: var(--text-color);
     padding: 20px;
     text-align: center;
 }
 
-h1, h2 {
-    margin-bottom: 10px;
+header h1 {
+    font-size: 3rem;
 }
 
 main {
-    padding: 20px;
+    background-color: var(--background-color); 
+    display: grid;
+
+    margin-top: 10px;
+    
 }
 
 /* Hero Image */
@@ -42,57 +51,48 @@ main {
 }
 
 /* First Section */
-.info {
+.data-section {
     padding: 20px;
+    margin: 0 auto;    
+    width: 300px;
 }
 
-.section-title {
+.section-title {  
     font-size: 24px;
-    color: var(--secondary-color);
-    position: relative;
+    color: var(--text-color);
+    background-color: var(--secondary-color); 
+    text-align: center;
+    padding: 0.3rem;
+    
 }
 
-/* Pseudo-element for decorative line */
-.section-title::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 4px;
-    background-color: var(--primary-color);
-    margin-top: 5px;
+.section-list li {
+    list-style-type: none;
+    padding: 0.5rem;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
 }
 
-.data-list {
-    list-style: none;
-}
 
-.data-list li {
-    margin-bottom: 10px;
-}
-
-.data-list strong {
-    font-weight: bold;
+span:first-child {
+    font-weight:600;
+    text-align: right;
 }
 
 /* Weather Section */
 .weather {
     padding: 20px;
+    margin: 0 auto;  
+    width: 300px;  
 }
 
-.weather-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    list-style: none;
+.weather-icon {
+    display: block;
+    margin: 0 auto;
+    width: 50px;
 }
 
-.weather-list li {
-    margin-bottom: 10px;
-}
-
-.weather-list strong {
-    font-weight: bold;
-}
 
 footer {
     text-align: center;
@@ -100,6 +100,9 @@ footer {
     background-color: var(--primary-color);
     color: var(--text-color);
     position: relative;
+}
+footer p {
+    padding: 0.5rem;
 }
 
 /* Responsive Design with Media Query */
@@ -116,10 +119,10 @@ footer {
         width: 100%;
     }
 
-    .info {
+    .data-section {
         position: absolute;
-        top: 10%;
-        right: 10%;
+        top: 15%;
+        left: 2%;
         background-color: rgba(255, 255, 255, 0.8);
         padding: 20px;
         max-width: 300px;
@@ -128,13 +131,13 @@ footer {
     .weather {
         position: absolute;
         bottom: 10%;
-        right: 10%;
+        right: 5%;
         background-color: rgba(255, 255, 255, 0.8);
         padding: 20px;
         max-width: 300px;
     }
 
     .section-title {
-        margin-left: -20px; /* Title hanging effect */
+        margin-left: -40px; /* Title hanging effect */
     }
 }
