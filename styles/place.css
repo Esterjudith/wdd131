@@ -87,13 +87,11 @@ span:first-child {
     width: 300px;  
 }
 
-.weather-title::after{
-    content:"⛅";
-    display: inline-block;       
-    padding-left: 2rem;
-}
+
 .weather-icon {
-    display: none;    
+    display: block;
+    margin: 0 auto;
+    width: 50px;
 }
 
 
@@ -152,14 +150,14 @@ footer p {
     .section-title {
         margin-left: -40px; /* Title hanging effect */
     }
-    .weather-title::after{       
-        display:none;
-     
+    .weather-title::after{
+        content:"⛅";
+        display: inline-block;       
+        padding-left: 2rem;
     }
     .weather-icon {
-        display: block;
-        margin: 0 auto;
-        width: 50px;
+        display: none;
+      
     }
     
 }
@@ -200,14 +198,14 @@ footer p {
     .section-title {
         margin-left: -40px; /* Title hanging effect */
     }
-    .weather-title::after{       
-        display:none;
-     
+    .weather-title::after{
+        content:"⛅";
+        display: inline-block;       
+        padding-left: 2rem;
     }
     .weather-icon {
-        display: block;
-        margin: 0 auto;
-        width: 50px;
+        display: none;
+      
     }
     
 }
