@@ -1,0 +1,235 @@
+:root {
+    margin: 0 5rem;
+    box-sizing: border-box;
+
+}
+
+body {
+    height: 100%;
+    margin: 0;
+}
+p {
+    font-family: "Poppins", sans-serif;
+}
+
+.logo {
+    text-align: center;
+}
+.hero{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; 
+    min-width: 300px;
+    background-image: linear-gradient(90deg, rgba(99,164,108,0.8379726890756303) 0%, rgba(255,255,255,0.6783088235294117) 99%), url('../images/backgroundmini.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;   
+}
+
+.hero p {
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.5rem;
+    letter-spacing: .75rem;
+}
+
+/* Styling the hamburger lines */
+#menu {
+    display: block;
+    font-size: 2rem;
+    font-weight: 500;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: .5rem .75rem;    
+    color: #000;
+}
+#menu::before {
+    content: "≡";
+    color: rgb(17, 1, 1);
+}
+
+nav {
+    background-color:#EB8258;
+    max-width: 760px;
+}
+
+.navigation {
+    list-style: none;
+    margin: 0 auto;
+    max-width: 760px;
+}
+
+.navigation li {
+    display:none;
+}
+
+.navigation a {
+  display: block;
+  padding: 0.75px;
+  text-align:left;
+  text-decoration: none;
+  padding: .5rem .75rem;
+  color: black;
+  font-weight: 700;
+  transition: 0.5s;
+  font: clamp(1rem, 2vmin, 1.5rem);
+  font-size: 1.2rem;
+}
+
+
+.navigation a:hover, navigation a:active {
+    color: white;
+    background-color:#065143;
+}
+
+.show li {
+    display: block; 
+}
+
+#menu.show::before {
+    content: "X";
+}
+
+.cards-container{
+    background-color: #065143; 
+}
+.cards {    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+.card {
+    margin-top: 2rem;
+    display: inline-block;
+    position: relative;
+    width: 300px;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 8px;
+    overflow: hidden;  
+}
+
+.card img {
+    width: 100%;
+    display: block;
+    height: 469px;
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.7); 
+    color: white;
+    transform: translateY(100%); 
+    opacity: 0; 
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .card h3 {
+    margin: 0;
+    font-size: 1.2em;
+  }
+  
+  .card p {
+    margin: 8px 0 0;
+    font-size: 0.9em;
+  }
+  
+  .card:hover .card-content {
+    transform: translateY(0); 
+    opacity: 1;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+  }
+
+  footer {
+    background-color: #63A46C;
+    padding: 2rem;
+    text-align: center;
+}
+/*===================== Desktop screen ================================*/
+
+@media screen and (min-width:56rem ){
+    .home-header {        
+        width: 80%;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+  
+
+    .nav {
+        background-color: transparent;
+    }
+     
+    .logo {
+        padding: 2rem;
+    }
+    .logo img {
+        width: 130px;
+    }
+
+
+    .navigation {
+        display: flex;
+       
+      } 
+
+      nav ul.navigation {
+        display: flex;
+        gap: 2rem;
+    }
+
+    nav ul.navigation li a {
+        color: black; /* Makes links white to be visible over the hero image */
+        font-weight: bold;
+        text-decoration: none;
+    }    
+    
+    .navigation li {
+ 
+       display: block;
+       flex: 1 1 100%;
+     }
+    .navigation a {
+       text-align: center;
+    }
+     
+    #menu {
+       display: none;
+     
+    }
+
+   
+    .hero{    
+        height: 80vh;
+        background-image: linear-gradient(90deg, rgba(99,164,108,0.8379726890756303) 0%, rgba(255,255,255,0.6783088235294117) 99%),url('../images/background.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .hero p {
+          font-size: 3rem;  
+          color: #000000;
+    }
+}

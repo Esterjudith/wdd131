@@ -1,0 +1,61 @@
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+.schedule-container {
+    margin-left: 2rem;
+}
+
+.studio-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.schedule-container table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.schedule-container th, .schedule-container td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.schedule-container th {
+    background-color: #EB8258;
+}
+
+/*===================== Mobile view (default) ================================*/
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr; /* Stack items vertically */
+    gap: 20px;
+    padding: 0 1rem;
+}
+
+/*===================== Desktop screen ================================*/
+@media screen and (min-width: 56rem) {
+    main {
+        display: flex;
+        justify-content: center; /* Center .main-content within the main container */
+    }
+    
+    .main-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Side-by-side layout */
+        gap: 20px;
+        width: 100%;
+        max-width: 1200px; /* Restrict max width on larger screens */
+    }
+
+    .studio-image {
+        margin-bottom: 0;
+    }
+
+    .schedule-container {
+        align-self: center;
+    }
+}
