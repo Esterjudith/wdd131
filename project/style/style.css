@@ -1,5 +1,5 @@
 :root {
-    margin: 0 5rem;
+    margin: 0;
     box-sizing: border-box;
 
 }
@@ -8,9 +8,12 @@ body {
     height: 100%;
     margin: 0;
 }
+
+
 p {
     font-family: "Poppins", sans-serif;
 }
+
 
 .logo {
     text-align: center;
@@ -28,8 +31,9 @@ p {
 }
 
 .hero p {
-    color: white;
+    color: black;
     text-align: center;
+    font-size: 1.5rem;
     font-weight: 700;
     line-height: 1.5rem;
     letter-spacing: .75rem;
@@ -98,7 +102,7 @@ nav {
 }
 .cards {    
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 1fr;
     gap: 20px;
     justify-content: center;
     align-items: center;
@@ -163,9 +167,20 @@ nav {
     padding: 2rem;
     text-align: center;
 }
+
+/* ================= Mid Size Screen ====================== */
+@media screen and (min-width:34rem) {
+    .cards{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 /*===================== Desktop screen ================================*/
 
-@media screen and (min-width:56rem ){
+@media screen and (min-width:80rem ){
+    :root {
+        margin: 0 5rem;
+    }
     .home-header {        
         width: 80%;
         position: absolute;
@@ -199,7 +214,7 @@ nav {
     }
 
     nav ul.navigation li a {
-        color: black; /* Makes links white to be visible over the hero image */
+        color: black; 
         font-weight: bold;
         text-decoration: none;
     }    
@@ -231,5 +246,9 @@ nav {
     .hero p {
           font-size: 3rem;  
           color: #000000;
+    }
+
+    .cards {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
